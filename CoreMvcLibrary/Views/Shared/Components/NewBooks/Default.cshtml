@@ -1,0 +1,17 @@
+﻿@model List<CoreMvcLibrary.Models.Books>
+
+<table class="table table-bordered">
+    <tr>
+        <th>No</th>
+        <th>Kitap Adı</th>
+        <th>Yazar</th>
+    </tr>
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td>@book.ID</td>
+            <td>@book.BookName</td>
+            <td>@book.Writer</td>
+        </tr>
+    }
+</table>

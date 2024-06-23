@@ -1,0 +1,23 @@
+﻿@model List<CoreMvcLibrary.Models.Books>
+
+<h2>Kitaplar</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>No</th>
+        <th>Kitap Adı</th>
+        <th>Yazar</th>
+    </tr>
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td>@book.ID</td>
+            <td>@book.BookName</td>
+            <td>@book.Writer</td>
+        </tr>
+    }
+</table>
+<h3>Gelecek Kitaplar</h3>
+
+@await Component.InvokeAsync("NewBooks")
+
+@Html.Partial("_PartialPage")
